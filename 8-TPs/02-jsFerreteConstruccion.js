@@ -19,7 +19,7 @@ function Rectangulo () // A. mostrar la cantidad de alambre a comprar  si se ing
     
     cantidadAlambre = perimetro * 3;
     
-    alert (cantidadAlambre);
+    alert (cantidadAlambre.toFixed (2));
 }
 function Circulo () // B. mostrar la cantidad de alambre a comprar  si se ingresara el radio  de un terreno circular y se debe alambra con tres hilos de alambre.
 {
