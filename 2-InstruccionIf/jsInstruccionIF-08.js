@@ -11,8 +11,8 @@ edad = parseInt (edad);
 
 estadoCivil = document. getElementById ("estadoCivil");
 
-if (!(edad <= 18 && estadoCivil != "Soltero")) 
-{
+	if (!(edad <= 18 && estadoCivil != "Soltero")) 
+	{
 	alert ("Es soltero y no es menor");
-}
+	}
 }

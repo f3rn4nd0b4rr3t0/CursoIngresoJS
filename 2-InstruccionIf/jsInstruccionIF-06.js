@@ -13,14 +13,11 @@ edad = parseInt (edad);
 	{ 
 	alert ("Es un niño");
 	}
-
-	else 
-	if (edad >= 13 && edad <= 17)
+	else if (edad >= 13 && edad <= 17)
 	{	
 	alert ("Es un adolescente");
 	}
-
-	else 	
+	if (edad > 18)
 	{
 	alert ("Es mayor de edad");
 	}

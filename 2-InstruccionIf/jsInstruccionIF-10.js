@@ -13,14 +13,12 @@ function mostrar()
 	{
 	alert("EXCELENTE");
 	}
-		
-	if (notaExamen >= 4)
+	else if (notaExamen >= 4)
 	{
 	alert ("APROBÓ");
 	}
-	
 	{
-	if  (notaExamen < 4) 
+	if (notaExamen < 4) 
 	alert ("Vamos, la próxima se puede");
 	}
 }

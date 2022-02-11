@@ -1,7 +1,7 @@
 //Al presionar el Botón, mostrar un número Random del 1 al 10 inclusive
-	//Genero el número RANDOM entre 1 y 10
+//Genero el número RANDOM entre 1 y 10
 
-	function mostrar()
+function mostrar()
 {
 	let random;
 	let mostrar = Math,random;
@@ -12,5 +12,4 @@
 	{
 	alert(mostrar);	
 	}
-	
 }
