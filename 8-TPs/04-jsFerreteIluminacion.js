@@ -8,25 +8,65 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
  */
 
-function CalcularPrecio () 
-{
-var cantidadLampara; 
-var descuento;
-var PRECIO_LAMPARA = 35;
-var marca;
-var precioFinaL; 
-var precioUnitario;
+function CalcularPrecio()
+ {
+    const PRECIO_LAMPARITA = 35;
+    var cantidadLamparitas;
+    var descuento;
+    var precioTotal;
+    var marca;
+    var precioDescuento;
+    var iiBB;
 
 
-cantidadLampara = parseFloat (document.getElementById ("txtIdCantidad") . value);
-marca = document.getElementById ("Marca"). value;
+    cantidadLamparitas = document.getElementById("txtIdCantidad").value;
+    cantidadLamparitas = parseFloat(cantidadLamparitas);
 
-precioUnitario = PRECIO_LAMPARA * cantidadLampara;
+    marca = document.getElementById("Marca");
 
-    if (cantidadLampara >= 6)
-    {
-    precioFinaL =  cantidadLampara * PRECIO_LAMPARA ;
-    descuento = (precioUnitario) - ((PRECIO_LAMPARA * cantidadLampara) * 50/100) ;
-    document.getElementById ("txtIdprecioDescuento") . value = precioFinaL - descuento;
+    if (cantidadLamparitas >= 6) {
+        descuento = 50;
     }
+    if (cantidadLamparitas == 5) {
+        if (marca == "AgentinaLuz") {
+            descuento = 40;
+        }
+        else  
+        {
+            descuento = 30;
+        }
+    }
+    if (cantidadLamparitas == 4) {
+        if (marca == "AgentinaLuz" && marca == "FelipeLamparas") {
+            descuento = 25;
+        }
+        if (marca == "JeLuz" && marca == "HazIluminacion" && marca == "Osram") {
+            descuento = 20;
+        }
+    }
+    if (cantidadLamparitas == 3) {
+        if (marca == "AgentinaLuz") {
+            descuento = 15;
+        }
+        if (marca == "FelipeLamparas") {
+            descuento = 10;
+        }
+        else {
+            descuento = 5;
+        }
+    }
+    else {
+        descuento = 0;
+    }
+
+    precioTotal = cantidadLamparitas * PRECIO_LAMPARITA;
+    descuento = precioTotal * descuento / 100;
+    precioDescuento = precioTotal - descuento;
+
+    if (precioDescuento > 120) {
+        iiBB = precioDescuento * 10 / 100;
+        precioTotal = descuento + iiBB;
+        alert(`Usted pago $${iiBB} de IIBB`);
+    }
+    document.getElementById("txtIdprecioDescuento").value = "$" + precioTotal.toFixed(2);
 }
