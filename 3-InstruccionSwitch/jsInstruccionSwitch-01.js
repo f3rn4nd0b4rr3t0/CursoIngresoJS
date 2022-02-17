@@ -5,7 +5,6 @@
 //si es Julio: "se vienen las vacaciones!!!."
 //si es Diciembre: "Felices fiesta!!!."
 
-
 function mostrar() {
 
 	var mesDelAño;

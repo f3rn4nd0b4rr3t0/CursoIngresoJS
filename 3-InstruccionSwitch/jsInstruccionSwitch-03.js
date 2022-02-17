@@ -19,8 +19,4 @@ function mostrar()
 			break;
 
 	}
-
-
-
-
-}//FIN DE LA FUNCIÓN
+}
