@@ -5,77 +5,48 @@
 //en Otoño: Se viaja a todos los destinos.
 //primavera: solo no se viaja a Bariloche
 
-function mostrar()
+function mostrar() 
 {
-
-
-}//FIN DE LA FUNCIÓN
-
-
-
-
-function mostrar()
-{
-	var estacionIngresada =document.getElementById("txtIdEstacion").value;
-	var destinoIngresado =document.getElementById("txtIdDestino").value;
+	var estacionIngresada = document.getElementById("txtIdEstacion").value;
+	var destinoIngresado = document.getElementById("txtIdDestino").value;
 
 	let mensaje;
 
-
-	switch(estacionIngresada){
+	switch (estacionIngresada) {
 		case "Invierno":
-			switch(destinoIngresado){
+			switch (destinoIngresado) {
 				case "Bariloche":
-					mensaje="Se viaja";
+					mensaje = "Se viaja";
 					break;
 				default:
-					mensaje="No se viaja";
+					mensaje = "No se viaja";
 					break;
 			}
-			// if (destinoIngresado == "Bariloche"){
-			// 	alert("Se viaja");
-			// } else {
-			// 	alert("No se viaja");
-			// }
 			break;
 		case "Verano":
-			switch(destinoIngresado){
+			switch (destinoIngresado) {
 				case "Mar del plata":
 				case "Cataratas":
-					mensaje="Se viaja";
+					mensaje = "Se viaja";
 					break;
 				default:
-					mensaje="No se viaja";
+					mensaje = "No se viaja";
 					break;
 			}
-
-			// 	if (destinoIngresado == ("Mar del plata" || "Cataratas")) {
-			// 		alert("Se viaja");
-			// } else {
-			// 	alert("No se viaja");
-			// }
-			
 			break;
 		case "Otoño":
-			mensaje="Se viaja";
-				break;
+			mensaje = "Se viaja";
+			break;
 		case "Primavera":
-			switch (destinoIngresado){
+			switch (destinoIngresado) {
 				case "Bariloche":
-					mensaje="No se viaja";
+					mensaje = "No se viaja";
 					break;
 				default:
-					mensaje="Se viaja";
+					mensaje = "Se viaja";
 					break;
-				
 			}
-			// if (destinoIngresado == "Bariloche"){
-			// 	alert("No se viaja");
-			// } else {
-			// 	alert("Se viaja");
-			// }
 			break;
-
 	}
 	alert(mensaje);
 }

@@ -25,34 +25,34 @@ function CalcularPrecio()
     marca = document.getElementById("Marca");
 
     if (cantidadLamparitas >= 6) {
-        descuento = 50;
+        descuento = -50;
     }
     if (cantidadLamparitas == 5) {
         if (marca == "AgentinaLuz") {
-            descuento = 40;
+            descuento = -40;
         }
         else  
         {
-            descuento = 30;
+            descuento = -30;
         }
     }
     if (cantidadLamparitas == 4) {
         if (marca == "AgentinaLuz" && marca == "FelipeLamparas") {
-            descuento = 25;
+            descuento = -25;
         }
         if (marca == "JeLuz" && marca == "HazIluminacion" && marca == "Osram") {
-            descuento = 20;
+            descuento = -20;
         }
     }
     if (cantidadLamparitas == 3) {
         if (marca == "AgentinaLuz") {
-            descuento = 15;
+            descuento = -15;
         }
         if (marca == "FelipeLamparas") {
-            descuento = 10;
+            descuento = -10;
         }
         else {
-            descuento = 5;
+            descuento = -5;
         }
     }
     else {
@@ -62,12 +62,14 @@ function CalcularPrecio()
     precioTotal = cantidadLamparitas * PRECIO_LAMPARITA;
     descuento = precioTotal * descuento / 100;
     precioDescuento = precioTotal - descuento;
-    precioTotal = precioDescuento;
-
+  
     if (precioDescuento > 120) {
         iiBB = precioDescuento * 10 / 100;
         precioTotal = descuento + iiBB;
         alert(`Usted pago $${iiBB} de IIBB`);
     }
-    document.getElementById("txtIdprecioDescuento").value = "$" + precioDescuento.toFixed(2);
+    else {
+    precioTotal = precioDescuento;
+    }
+    document.getElementById("txtIdprecioDescuento").value = "$" + precioTotal.toFixed(2);
 }
