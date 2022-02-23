@@ -3,13 +3,18 @@
 
 function mostrar()
 {
-	let random;
-	let mostrar = Math,random;
+	var contador;
+	var acumulador;
+    
+	mensaje = "si"
 	
-	random = mostrar;
+									//let random;
+									//let mostrar = Math,random;
+	
+									//random = mostrar;
 
-	if (mostrar >= 1 && 9)
-	{
-	alert(mostrar);	
-	}
+									//if (mostrar >= 1 && 9)
+									//{
+									//alert(mostrar);	
+									//}
 }

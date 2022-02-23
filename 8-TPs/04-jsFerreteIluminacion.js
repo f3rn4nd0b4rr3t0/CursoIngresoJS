@@ -8,8 +8,7 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
  */
 
-function CalcularPrecio()
-{
+function CalcularPrecio() {
     const PRECIO_LAMPARITA = 35;
     var cantidadLamparitas;
     var descuento;
@@ -20,33 +19,32 @@ function CalcularPrecio()
 
 
     cantidadLamparitas = document.getElementById("txtIdCantidad").value;
-    cantidadLamparitas = parseFloat(cantidadLamparitas);
+    cantidadLamparitas = parseInt(cantidadLamparitas);
 
     marca = document.getElementById("Marca");
 
     if (cantidadLamparitas >= 6) {
         descuento = -50;
     }
-    if (cantidadLamparitas == 5) {
-        if (marca == "AgentinaLuz") {
+    else if (cantidadLamparitas == 5) {
+        if (marca == "ArgentinaLuz") {
             descuento = -40;
         }
-        else  
-        {
+        else {
             descuento = -30;
         }
     }
-    if (cantidadLamparitas == 4) {
-        if (marca == "AgentinaLuz" && marca == "FelipeLamparas") {
+    else if (cantidadLamparitas == 4) {
+        if (marca == "ArgentinaLuz" || marca == "FelipeLamparas") {
             descuento = -25;
         }
-        if (marca == "JeLuz" && marca == "HazIluminacion" && marca == "Osram") {
+        else {
             descuento = -20;
         }
     }
-    if (cantidadLamparitas == 3) {
-        if (marca == "AgentinaLuz") {
-            descuento = -15;
+    else if (cantidadLamparitas == 3) {
+        if (marca == "ArgentinaLuz") {
+            descuento = 15;
         }
         if (marca == "FelipeLamparas") {
             descuento = -10;
@@ -61,15 +59,13 @@ function CalcularPrecio()
 
     precioTotal = cantidadLamparitas * PRECIO_LAMPARITA;
     descuento = precioTotal * descuento / 100;
-    precioDescuento = precioTotal - descuento;
-  
+    precioDescuento = precioTotal + descuento;
+
     if (precioDescuento > 120) {
         iiBB = precioDescuento * 10 / 100;
-        precioTotal = descuento + iiBB;
+        precioDescuento = precioDescuento + iiBB;
         alert(`Usted pago $${iiBB} de IIBB`);
     }
-    else {
-    precioTotal = precioDescuento;
-    }
-    document.getElementById("txtIdprecioDescuento").value = "$" + precioTotal.toFixed(2);
+    document.getElementById("txtIdprecioDescuento").value = "$" + precioDescuento.toFixed(2);
 }
+
