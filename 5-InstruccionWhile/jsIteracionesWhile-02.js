@@ -2,13 +2,13 @@
 al presionar el botón mostrar 10 repeticiones 
 con números DESCENDENTES, desde el 10 al 1.*/
 
-function mostrar()
+function mostrar() 
 {
-	var i=10;
+	var i = 10;
 
-	while (i >= 1)
-	{
+	while (i >= 1) {
+		
 		console.log(i);
-		i= i-1;	
+		i = i - 1;
 	}
 }
