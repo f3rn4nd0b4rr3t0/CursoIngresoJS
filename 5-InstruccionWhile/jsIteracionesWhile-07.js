@@ -9,7 +9,7 @@ function mostrar()
 	var acumulador;
 	var promedio;
 	var respuesta = "si";
-	
+
 	acumulador = 0;
 	contador = 0;
 
