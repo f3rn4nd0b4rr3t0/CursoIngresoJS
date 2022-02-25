@@ -1,7 +1,16 @@
-function mostrar()
+//Enunciado:
+//al presionar el botón 
+//repetir hasta que utilizamos 'BREAK'.
+
+function mostrar() 
 {
-	alert("ok");
 
+	var i;
 
-
-}//FIN DE LA FUNCIÓN
+	for (i = 0; i < 5; i++) {
+		console.log(i);
+		if (i == 4) {
+			break;
+		}
+	}
+}
