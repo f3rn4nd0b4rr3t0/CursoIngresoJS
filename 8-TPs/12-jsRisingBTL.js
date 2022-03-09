@@ -32,13 +32,13 @@ function ComenzarIngreso()
 		sueldoBruto = parseInt(prompt("Error: Reingrese sueldo mayor a 8000"));
 	}
 	numeroLegajo = parseInt(prompt("Ingrese numero legajo de 4 cifras sin ceros a la izquierda"));
-	while (numeroLegajo < 1000 || numeroLegajo > 9999){
+	while (numeroLegajo < 1000 || numeroLegajo > 9999) {
 		numeroLegajo = parseInt(prompt("Error: Reingrese numero legajo valido (desde 1000 hasta 9999)"));
 	}
 	nacionalidad = prompt("Ingrese letra de nacionalidad correspondiente: (a) Argentino || (e) Extranjero || (n) Nacionalizado").toLocaleLowerCase();
-	while (nacionalidad != "a" && nacionalidad != "e" && nacionalidad !="n") {
+	while (nacionalidad != "a" && nacionalidad != "e" && nacionalidad != "n") {
 		nacionalidad = prompt("Error: Reingrese letra de nacionalidad correspondiente: (a) Argentino || (e) Extranjero || (n) Nacionalizado")
-	} 
+	}
 	document.getElementById("txtIdEdad").value = edadIngresada;
 	document.getElementById("txtIdSexo").value = sexoIngresado;
 	document.getElementById("txtIdEstadoCivil").value = estadoCivilIngresado;
