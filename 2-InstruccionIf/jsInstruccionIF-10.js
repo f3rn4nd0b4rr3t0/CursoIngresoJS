@@ -7,7 +7,7 @@ function mostrar()
 {
 	var notaExamen;
 
-	notaExamen = Math.floor (Math.random () * 10) + 1;
+	notaExamen = Math.floor(Math.random () * 10) + 1;
 	
 	if (notaExamen >= 10) 
 	{
@@ -15,10 +15,10 @@ function mostrar()
 	}
 	else if (notaExamen >= 4)
 	{
-	alert ("APROBÓ");
+	alert("APROBÓ");
 	}
 	{
 	if (notaExamen < 4) 
-	alert ("Vamos, la próxima se puede");
+	alert("Vamos, la próxima se puede");
 	}
 }

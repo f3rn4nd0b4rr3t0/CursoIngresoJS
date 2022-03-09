@@ -3,12 +3,12 @@
 
 function mostrar()
 {
-let edad;
+    let edad;
 
-edad = parseInt (document. getElementById ("txtIdEdad"). value);
+    edad = parseInt(document.getElementById("txtIdEdad")).value;
 
-if (edad <= 13 || edad >= 17)   // "||" OPERADOR PIPE
-{
-alert ("Usted no es adolescente");
+    if (edad <= 13 || edad >= 17)   // "||" OPERADOR PIPE
+    {
+    alert ("Usted no es adolescente");
 }
 }  
